@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.mynuntium.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_viewMainFragment"
+            app:destination="@id/viewMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewMainFragment"
+        android:name="com.example.mynuntium.ViewMainFragment"
+        android:label="fragment_view_main"
+        tools:layout="@layout/fragment_view_main" >
+        <action
+            android:id="@+id/action_viewMainFragment_to_consentFragment"
+            app:destination="@id/consentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/consentFragment"
+        android:name="com.example.mynuntium.ConsentFragment"
+        android:label="fragment_consent"
+        tools:layout="@layout/fragment_consent" >
+        <action
+            android:id="@+id/action_consentFragment_to_selectFragment"
+            app:destination="@id/selectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectFragment"
+        android:name="com.example.mynuntium.SelectFragment"
+        android:label="fragment_select"
+        tools:layout="@layout/fragment_select" >
+        <action
+            android:id="@+id/action_selectFragment_to_pagerDataInfoFragment"
+            app:destination="@id/pagerDataInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerDataInfoFragment"
+        android:name="com.example.mynuntium.PagerDataInfoFragment"
+        android:label="fragment_pager_data_info"
+        tools:layout="@layout/fragment_pager_data_info" />
+</navigation>
